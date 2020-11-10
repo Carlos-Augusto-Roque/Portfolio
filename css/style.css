@@ -1,0 +1,285 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*início do menu*/
+
+.menu{ /*pai (toda área do menu)*/
+    width: 100%; /*largura do menu*/
+    height: 60px; /*altura do menu*/
+    background-color: black; /*cor de fundo do menu*/
+}
+.menu nav{ /*filho do menu ( área máxima delimitada para posicionar o <a>*/ 
+    width: 1200px; /*largura do nav (máximo onde podem chegar os itens*/
+    height: 60px; /*altura máxima onde pode chegar os itens*/
+    margin: auto; /* margem configurada pelo navegador*/
+    display: flex; /*permite que itens dentro da nav se posicionem lado a lado*/
+    justify-content: center; /*ajusta os elementos para ficarem centralizados no nav*/
+}
+.menu nav ul{ /*filho do menu nav (area de poscionamento dos itens)*/
+    width: 600px; /*largura da ul*/ 
+    height: 60px; /*altura da ul*/
+    list-style-type:none; /*sem marcadores*/
+    display: flex;/*permite os itens dentro da ul ficarem lado a lado*/
+    justify-content: space-around;/*espaçamento entre os elementos*/
+    align-items: center; /*alinha os elementos co centro da ul*/
+}
+.menu nav a{ /*filho do menu nav também (elementos do menu)*/
+    color: #fff; /*cor da fonte*/
+    text-decoration: none; /*sem underline*/
+    text-transform: uppercase; /*letra maiúscula*/
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;  /*tipo da fonte*/
+    font-size: 20px; /*tamanho da fonte*/
+    padding: 17px 50px; /*área que vai receber o clique*/
+}
+
+/*fim do menu*/
+
+/*início do banner*/
+
+.banner{
+    background-color: rgba(184, 183, 183, 0.856);
+    width: 100%;
+    height: 650px;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    font-family: sans-serif;
+}
+
+.conteiner_banner{
+    /* background-color: blueviolet; */
+    text-align: center;
+    width: 80%;
+    height: 30%;
+    align-items: center;
+
+}
+
+.button a{
+    font-size: 1.5em; /* tamanho da fonte*/
+    text-transform: uppercase; /*letra maiúscula*/
+    color: #fff; /*cor da fonte*/
+    text-decoration: none; /*sem sublinhado*/
+    background-color:#000; /*cor de fundo do link*/
+    padding: 0.5em .5em; /* espaçamento interno do link*/
+    border-radius: 0.5em; /*arredondamento da borda*/
+}
+
+.tag_h1{
+    text-transform: uppercase;
+}
+    
+.banner h2{
+    font-size: 3em;
+}
+
+.p_h1{
+    padding-bottom: 1em;
+} 
+/*fim do banner*/
+
+
+/*inicio do sobre*/
+.sobre_mim{
+    width: 100%;
+    height: 650px;
+    /* background-color: coral; */
+}
+
+.conteiner_sobre{
+    width: 95%;
+    height: 100%;
+    /* background-color: aqua; */
+    margin: auto;
+    
+}
+
+.conteiner_sobre h2{
+    text-transform: uppercase;
+    text-align: center;
+    font-family: sans-serif;
+    height: 50px;
+    font-size: 1.5em;
+    padding-top: 1.5em;  
+}
+
+.conteiner_informacoes{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    padding-top: 2em;
+}
+
+
+.howdy{
+    width: 50%;
+    height: 500px;
+    /* background-color: blue; */
+    font-family: sans-serif;
+    text-align: justify;
+    
+}
+.howdy h3{
+    font-size: 24px;
+    padding-top: 47px;
+}
+
+.howdy p{
+    padding-top: .5em;
+    font-size: 20px;
+}
+
+.howdy .button{
+    margin-top: 2em;
+}
+
+.skills{
+    width: 40%;
+    height: 500px;
+    /* background-color: chartreuse; */
+    margin:auto;
+}
+
+.skills li{
+    position: relative;
+    list-style: none;
+    margin: 50px 0;
+    font-weight: 200;
+    text-transform: uppercase;
+    font-family:sans-serif;
+    font-size: 20px;
+}
+    
+.skills li:before{
+    content: "";
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0%;
+    width: 100%;
+    height: 15px;
+    background-color: rgb(105, 105, 105);
+    border-radius: 1000px;
+} 
+    
+.skills li:after{
+    content: "";
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    width: 100%;
+    height: 15px;
+    background-color: black;
+    border-radius: 1000px;
+    animation-duration: .7s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+    
+li.design:after{
+    animation-name: design;
+    }
+@keyframes design {
+        to{
+            width: 90%;
+        }
+}
+    
+li.html:after{
+    animation-name: html;
+    }
+@keyframes html {
+        to{
+            width: 80%;
+        }
+    } 
+    
+li.wordpress:after{
+        animation-name: wordpress;
+    }
+    @keyframes wordpress{
+        to{
+            width: 60%;
+        }
+    
+
+}
+
+/*fim do sobre*/
+
+
+/*inicio cards*/
+.meus_trabalhos{
+    width: 100%;/*largura*/
+    height: 650px;/*altura*/
+    background-color:rgba(184, 177, 177, 0.89);
+}
+.trabalhos{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    /* background-color: darkgoldenrod; */
+    
+}
+.trabalhos h4{
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-family: sans-serif;
+    /* background-color: lightcoral; */
+}
+.cards{
+    margin-left: 15px;
+    margin-top: 40px;
+}
+/*fim cards*/
+
+/*inicio rodape*/
+
+.rodape{
+    width: 100%;
+    height: 150px;
+}
+.rodape nav{/*configurar área que receberá o menu*/
+    width: 1200px;/*largura do nav*/
+    height: 150px;/*altura do nav*/
+    margin: 0 auto 0 auto;/*margem*/
+    display: flex;/*um item ao lado do outro*/
+    justify-content: center;/*itens alinhado ao centro do topo*/
+}
+.rodape nav a{/*configurar conteúdo dos itens , ex: tamanho fonte,cor,tipo de fonte etc*/
+    color:black;/*cor da fonte*/
+    text-decoration:none;/*Remove o underline*/
+    text-transform: uppercase;/*altera fonte para maiúscula*/
+    font-family: 'Roboto', sans-serif;/*define a fonte*/
+    font-size: 18px;/*tamanho da fonte*/
+    padding: 17px 50px;/*espaço entre os itens*/
+}
+.rodape nav ul{/*configurar ul(área delimitada receberá o menu)*/
+    width: 600px;/*largura da ul*/
+    height: 150px;/*altura da ul*/
+    list-style-type: none;/*Remove os marcadores da lista*/    
+    display: flex;/*Permite os elementos ficaram lado a lado*/
+    justify-content: space-around;/*Os itens são posicionados com espaço antes, entre e depois das linhas*/
+    align-items: center;/*Os itens são posicionados no centro do contêiner*/
+    
+}
+
+.siga-me{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.siga-me p{
+    font-family: sans-serif;
+}
+
+/*fim rodape*/
+
+
+
